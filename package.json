@@ -10,17 +10,24 @@
     "node": ">=14.15.0"
   },
   "dependencies": {
-    "@middy/core": "^3.4.0",
-    "@middy/http-json-body-parser": "^3.4.0"
+    "@middy/core": "^3.6.2",
+    "@middy/http-json-body-parser": "^3.4.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@aws-sdk/client-dynamodb": "^3.360.0",
+    "@aws-sdk/lib-dynamodb": "^3.360.0",
     "@serverless/typescript": "^3.0.0",
     "@types/aws-lambda": "^8.10.71",
     "@types/node": "^14.14.25",
+    "@types/uuid": "^9.0.2",
     "esbuild": "^0.14.11",
     "json-schema-to-ts": "^1.5.0",
     "serverless": "^3.0.0",
+    "serverless-dynamodb-local": "^0.2.40",
     "serverless-esbuild": "^1.23.3",
+    "serverless-offline": "^12.0.4",
+    "serverless-plugin-log-retention": "^2.0.0",
     "ts-node": "^10.4.0",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.1.3"

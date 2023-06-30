@@ -1,5 +1,5 @@
 GitHub repo:
-git@github.com:nirgluzman/AWS-Serverless-TypeScript-API.git
+git@github.com:nirgluzman/AWS-Serverless-TypeScript-Lambda-DynamoDB.git
 
 Source - Building a serverless app with TypeScript
 https://blog.logrocket.com/building-serverless-app-typescript/

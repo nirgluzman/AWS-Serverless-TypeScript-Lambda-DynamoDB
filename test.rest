@@ -1,7 +1,7 @@
-@url_localhost = http://[::1]:3000/dev
+@url_localhost = http://[::1]:3000/dev/todo
 @url = https://oo3cf0l0p7.execute-api.us-east-1.amazonaws.com/dev/todo
 ###
-GET {{url}}
+GET {{url_localhost}}
 
 ###
 DELETE {{url}}/54081102-f6d7-4cba-997b-73eac03602ef

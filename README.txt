@@ -9,7 +9,8 @@ Source - The Serverless Framework with AWS
 https://www.youtube.com/@CompleteCoding  
 https://www.youtube.com/watch?v=HhgXwKFUzT8 (create an API with TypeScript on AWS with Serverless Framework)
 
-Serverelss offline
+Serverless Offline
+https://www.serverless.com/plugins/serverless-offline
 https://github.com/99x/serverless-dynamodb-local/issues/294
 
 $ sls dynamodb install

@@ -14,19 +14,6 @@ export type ValidatedEventAPIGatewayProxyEvent<S> = Handler<
   APIGatewayProxyResult
 >;
 
-// type signature for a Lambda handler function to enforce event.pathParameters not null as input
-type ValidatedAPIGatewayProxyEventWithPathParameters = Omit<
-  APIGatewayProxyEvent,
-  'pathParameters'
-> & {
-  pathParameters: NonNullable<APIGatewayProxyEvent['pathParameters']>;
-};
-
-export type ValidatedEventAPIGatewayProxyEventWithPathParameters = Handler<
-  ValidatedAPIGatewayProxyEventWithPathParameters,
-  APIGatewayProxyResult
->;
-
 export const formatJSONResponse = (
   statusCode: number,
   response: Record<string, unknown>

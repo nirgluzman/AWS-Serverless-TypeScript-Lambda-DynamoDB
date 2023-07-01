@@ -34,39 +34,6 @@ export const createTodo = {
         method: 'post',
         path: '/todo',
         cors: true,
-        // request: {
-        //   schemas: {
-        //     'application/json': {
-        //       schema: {
-        //         type: 'object',
-        //         properties: {
-        //           title: {
-        //             type: 'string',
-        //             minLength: 1,
-        //             maxLength: 50,
-        //             required: true,
-        //             pattern: '^[a-zA-Z0-9 ]*$',
-        //             errorMessage: 'Title must be alphanumeric',
-        //           },
-        //           description: {
-        //             type: 'string',
-        //             minLength: 1,
-        //             maxLength: 50,
-        //             required: true,
-        //             pattern: '^[a-zA-Z0-9 ]*$',
-        //             errorMessage: 'Description must be alphanumeric',
-        //           },
-        //         },
-        //       },
-        //     },
-        //   },
-        // },
-        // response: {
-        //   headers: {
-        //     'Access-Control-Allow-Methods': '*',
-        //     'Access-Control-Allow-Origin': '*',
-        //   },
-        // },
       },
     },
   ],

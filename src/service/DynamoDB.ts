@@ -1,6 +1,6 @@
 // https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/javascript_dynamodb_code_examples.html
 
-import { dynamoDBClient } from '../model/DynamoDBClient';
+import { dynamoDBClient } from '@model/DynamoDBClient';
 import {
   DynamoDBDocumentClient,
   ScanCommand,
@@ -16,14 +16,12 @@ import { v4 as uuid } from 'uuid';
 
 import Todo from '../model/Todo';
 
-type StrictPartial<T> = Partial<T> & { [K in keyof any]: never };
-
 export const DynamoDB = {
   // https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/preview/client/dynamodb/command/ScanCommand/
   async getAll(TableName: string): Promise<Todo[]> {
     const result = await docClient.send(new ScanCommand({ TableName }));
     if (result.Items.length === 0) {
-      throw new Error(`No todo found`);
+      throw new Error(`No todos found in DB`);
     }
     return result.Items as Todo[]; // 'as' keyword for Type Assertion
   },
@@ -39,7 +37,7 @@ export const DynamoDB = {
   },
 
   // https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/preview/client/dynamodb/command/PutItemCommand/
-  async create(TableName: string, todo: StrictPartial<Todo>): Promise<Todo> {
+  async create(TableName: string, todo: Partial<Todo>): Promise<Todo> {
     todo.todoId = uuid();
     await docClient.send(new PutCommand({ TableName, Item: todo }));
     return todo as Todo;
@@ -49,7 +47,7 @@ export const DynamoDB = {
   async update(
     TableName: string, // name of the table containing the item to update
     id: string, // primary key of the item
-    attributeValues: StrictPartial<Todo>
+    attributeValues: Partial<Todo>
   ): Promise<Todo> {
     const UpdateExpression = `SET ${Object.keys(attributeValues)
       .map((attribute) => `#${attribute} = :${attribute}`)

@@ -3,12 +3,9 @@ import { APIGatewayProxyResult } from 'aws-lambda';
 
 import type { ValidatedEventAPIGatewayProxyEvent } from '@libs/api-gateway';
 import { formatJSONResponse } from '@libs/api-gateway';
-
 import { middyfy } from '@libs/lambda';
-
 import { bodySchemaCreateTodo } from './eventBodySchema';
-
-import { DynamoDB } from '../../service/DynamoDB';
+import { DynamoDB } from '@service/DynamoDB';
 
 const createTodo: ValidatedEventAPIGatewayProxyEvent<
   typeof bodySchemaCreateTodo

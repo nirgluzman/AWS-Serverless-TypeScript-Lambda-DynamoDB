@@ -2,10 +2,8 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 
 import { formatJSONResponse } from '@libs/api-gateway';
-
 import { middyfy } from '@libs/lambda';
-
-import { DynamoDB } from '../../service/DynamoDB';
+import { DynamoDB } from '@service/DynamoDB';
 
 const getTodo = async (
   event: APIGatewayProxyEvent

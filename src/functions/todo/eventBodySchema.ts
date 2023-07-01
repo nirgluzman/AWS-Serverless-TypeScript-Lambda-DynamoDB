@@ -1,7 +1,7 @@
-import { JSONSchema } from 'json-schema-to-ts';
+import { JSONSchema } from 'json-schema-to-ts'; // https://github.com/ThomasAribart/json-schema-to-ts
 
 // define the schema for the event.body
-const bodySchemaCreateTodo: JSONSchema = {
+const bodySchemaCreateTodo = {
   type: 'object',
   properties: {
     title: { type: 'string' },
@@ -10,9 +10,9 @@ const bodySchemaCreateTodo: JSONSchema = {
   },
   required: ['title', 'description'],
   additionalProperties: false,
-} as const; // set the properties of the object to readonly.
+} as const satisfies JSONSchema;
 
-const bodySchemaUpdateTodo: JSONSchema = {
+const bodySchemaUpdateTodo = {
   type: 'object',
   anyOf: [
     { required: ['title'] },
@@ -25,6 +25,6 @@ const bodySchemaUpdateTodo: JSONSchema = {
     status: { type: 'boolean' },
   },
   additionalProperties: false,
-};
+} as const satisfies JSONSchema;
 
 export { bodySchemaCreateTodo, bodySchemaUpdateTodo };

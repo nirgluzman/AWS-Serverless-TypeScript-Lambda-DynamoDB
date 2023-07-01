@@ -1,26 +1,26 @@
 @url_localhost = http://[::1]:3000/dev/todo
-@url = https://oo3cf0l0p7.execute-api.us-east-1.amazonaws.com/dev/todo
+@url = https://vrtort8x3f.execute-api.us-east-1.amazonaws.com/dev/todo
 ###
-GET {{url_localhost}}
+GET {{url}}
 
 ###
-DELETE {{url}}/54081102-f6d7-4cba-997b-73eac03602ef
+DELETE {{url}}/05d2e743-be8b-4748-b672-2f0189b6863a
 
 ###
 POST {{url}}
 Content-Type: application/json
 
 {
-    "title": "task-1",
+    "title": false,
     "description": "details"
 }
 
 ###
-PATCH {{url}}/54081102-f6d7-4cba-997b-73eac03602ef
+PATCH {{url}}/45cc28a4-9e55-4235-8540-4e8ba10c91f8
 Content-Type: application/json
 
 {
-    "title": "task-2",
+    "titl": "task-2",
     "status": true
 }
 

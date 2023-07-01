@@ -15,3 +15,15 @@ https://github.com/99x/serverless-dynamodb-local/issues/294
 
 $ sls dynamodb install
 $ sls offline start
+
+API Gateway - Model validation
+https://towardsaws.com/validate-your-api-request-at-the-api-gateway-using-serverless-framework-31901fc4e67e
+
+Step-1: TypeScript compiler
+$ tsc ./src/functions/todo/eventBodySchema.ts
+
+Step-2: build script to compile the JS file containing schema definitions into a JSON file
+$ npm run build
+
+Step-3: deployment to AWS
+$ npx sls deploy --verbose

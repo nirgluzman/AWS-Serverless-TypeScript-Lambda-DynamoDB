@@ -11,16 +11,16 @@ POST {{url}}
 Content-Type: application/json
 
 {
-    "title": false,
-    "description": "details"
+    "title": "task-1",
+    "description": "hello world"
 }
 
 ###
-PATCH {{url}}/45cc28a4-9e55-4235-8540-4e8ba10c91f8
+PATCH {{url}}/1b6b0463-669d-415e-8beb-78b67c5403f8
 Content-Type: application/json
 
 {
-    "titl": "task-2",
+    "title":"task-1",
     "status": true
 }
 

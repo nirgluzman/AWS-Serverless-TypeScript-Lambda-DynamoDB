@@ -1,3 +1,5 @@
+// https://towardsaws.com/validate-your-api-request-at-the-api-gateway-using-serverless-framework-31901fc4e67e
+
 import { handlerPath } from '@libs/handler-resolver';
 
 export const getAllTodos = {
@@ -34,6 +36,11 @@ export const createTodo = {
         method: 'post',
         path: '/todo',
         cors: true,
+        request: {
+          schemas: {
+            'application/json': '${file(./apiSchema.json):SchemaCreateTodo}',
+          },
+        },
       },
     },
   ],
@@ -47,6 +54,11 @@ export const updateTodo = {
         method: 'patch',
         path: '/todo/{id}',
         cors: true,
+        request: {
+          schemas: {
+            'application/json': '${file(./apiSchema.json):SchemaUpdateTodo}',
+          },
+        },
       },
     },
   ],

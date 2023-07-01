@@ -1,0 +1,52 @@
+{
+  "SchemaCreateTodo": {
+    "type": "object",
+    "description": "SchemaCreateTodo",
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "title",
+      "description"
+    ],
+    "additionalProperties": false
+  },
+  "SchemaUpdateTodo": {
+    "type": "object",
+    "description": "SchemaUpdateTodo",
+    "anyOf": [
+      {
+        "required": [
+          "title"
+        ]
+      },
+      {
+        "required": [
+          "description"
+        ]
+      },
+      {
+        "required": [
+          "status"
+        ]
+      }
+    ],
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "status": {
+        "type": "boolean"
+      }
+    },
+    "additionalProperties": false
+  }
+}

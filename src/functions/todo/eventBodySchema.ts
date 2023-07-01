@@ -6,7 +6,6 @@ const bodySchemaCreateTodo = {
   properties: {
     title: { type: 'string' },
     description: { type: 'string' },
-    status: { type: 'boolean' },
   },
   required: ['title', 'description'],
   additionalProperties: false,

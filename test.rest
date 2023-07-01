@@ -1,10 +1,10 @@
 @url_localhost = http://[::1]:3000/dev/todo
 @url = https://vrtort8x3f.execute-api.us-east-1.amazonaws.com/dev/todo
 ###
-GET {{url}}
+GET {{url}}/8c6742f9-4077-4c92-968a-c0eccfc56ecd
 
 ###
-DELETE {{url}}/05d2e743-be8b-4748-b672-2f0189b6863a
+DELETE {{url}}/35f97f7c-0a12-4e67-a5ed-15a974da9719
 
 ###
 POST {{url}}
@@ -16,7 +16,7 @@ Content-Type: application/json
 }
 
 ###
-PATCH {{url}}/1b6b0463-669d-415e-8beb-78b67c5403f8
+PATCH {{url}}/35f97f7c-0a12-4e67-a5ed-15a974da9719
 Content-Type: application/json
 
 {

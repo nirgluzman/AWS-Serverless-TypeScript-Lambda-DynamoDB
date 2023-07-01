@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@middy/core": "^3.6.2",
+    "@middy/http-cors": "^4.5.3",
     "@middy/http-json-body-parser": "^3.4.0",
     "uuid": "^9.0.0"
   },

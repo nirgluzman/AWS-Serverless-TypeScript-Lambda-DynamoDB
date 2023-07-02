@@ -36,6 +36,9 @@ export const createTodo = {
         method: 'post',
         path: '/todo',
         cors: true,
+        authorizer: {
+          arn: 'arn:aws:cognito-idp:us-east-1:493101195870:userpool/us-east-1_i1NCAX8MM',
+        },
         request: {
           schemas: {
             'application/json': '${file(./apiSchema.json):SchemaCreateTodo}',

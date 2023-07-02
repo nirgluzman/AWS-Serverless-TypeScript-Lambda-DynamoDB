@@ -27,3 +27,14 @@ $ npm run build
 
 Step-3: deployment to AWS
 $ npx sls deploy --verbose
+
+Cognito authorizer
+https://www.freecodecamp.org/news/aws-cognito-authentication-with-serverless-and-nodejs/
+https://stackoverflow.com/questions/56971070/how-to-configure-my-serverless-yml-to-use-my-api-gateway-authorizer
+
+InitiateAuth API call with the AWS CLI to obtain tokens from a Cognito User Pool:
+aws cognito-idp initiate-auth \
+  --auth-flow USER_PASSWORD_AUTH \
+  --client-id YOUR_CLIENT_ID \
+  --auth-parameters USERNAME=YOUR_USERNAME,PASSWORD=YOUR_PASSWORD \
+  --region YOUR_REGION
